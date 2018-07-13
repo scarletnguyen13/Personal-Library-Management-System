@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomepageController">
+   <center>
+      <ScrollPane fx:id="scrollPane" fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <content>
+            <StackPane fx:id="stackPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="150.0">
+               <children>
+                  <Rectangle fx:id="addBookArea" arcHeight="50.0" arcWidth="50.0" fill="WHITE" height="150.0" onMouseClicked="#addBook" stroke="#b5b5b5" strokeWidth="3.0" width="150.0" />
+                  <ImageView fx:id="addBookButton" fitHeight="114.0" fitWidth="114.0" nodeOrientation="INHERIT" onMouseClicked="#addBook" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER">
+                     <image>
+                        <Image url="@../../../../Pictures/11230-heavy-plus-sign.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </StackPane>
+         </content>
+      </ScrollPane>
+   </center>
+   <top>
+      <StackPane prefHeight="50.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle height="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="800.0" StackPane.alignment="CENTER">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#7bb7eb" />
+                        <Stop color="#7bb7eb" offset="0.007662835249042145" />
+                        <Stop color="#ffc2c2" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill></Rectangle>
+            <TextField fx:id="searchBar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="500.0" promptText="Search">
+               <font>
+                  <Font size="16.0" />
+               </font></TextField>
+         </children>
+      </StackPane>
+   </top>
+   <bottom>
+      <Button fx:id="deleteAllButton" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#removeAllBooks" prefHeight="30.0" prefWidth="800.0" style="-fx-background-color: #d3d3d3;" text="DELETE ALL" textFill="#c10501" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+   </bottom>
+</BorderPane>

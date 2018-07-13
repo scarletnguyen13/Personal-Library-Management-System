@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Rsrc-Class-Path: ./ org.eclipse.fx.ide.css.jfx8_3.0.0.201705220750.jar
+  mysql-connector-java-5.1.46-bin.jar sqlite-jdbc-3.23.1.jar
+Class-Path: .
+Rsrc-Main-Class: application.Main
+Main-Class: org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader
+

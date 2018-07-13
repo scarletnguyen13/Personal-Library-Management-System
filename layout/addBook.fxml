@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddBookController">
+   <top>
+      <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle fill="DODGERBLUE" height="100.0" strokeType="INSIDE" strokeWidth="0.0" width="600.0">
+               <stroke>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="WHITE" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </stroke>
+            </Rectangle>
+            <Label fx:id="introLabel" alignment="CENTER" text="Add Book" textFill="#fcfcfc" StackPane.alignment="CENTER">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="38.0" />
+               </font>
+            </Label>
+         </children>
+      </StackPane>
+   </top>
+   <center>
+      <VBox alignment="CENTER" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="nameText" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="500.0" promptText="Name">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <HBox fx:id="hbox1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="500.0" spacing="55.0">
+               <children>
+                  <TextField fx:id="authorText" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="344.0" promptText="Author">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox fx:id="hbox2" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="500.0" spacing="16.0">
+               <children>
+                  <Button fx:id="browseButton" contentDisplay="CENTER" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#browseImage" prefHeight="30.0" text="Browse" textAlignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox fx:id="hbox3" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="500.0" spacing="120.0">
+               <children>
+                  <CheckBox fx:id="completeCheckbox" alignment="CENTER_RIGHT" contentDisplay="CENTER" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="30.0" text="Completed?" textAlignment="RIGHT">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </CheckBox>
+               </children>
+            </HBox>
+            <TextArea fx:id="summaryText" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="500.0" promptText="Summary &amp; Review" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextArea>
+            <Button fx:id="addButton" mnemonicParsing="false" onAction="#addBook" text="ADD">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+</BorderPane>
